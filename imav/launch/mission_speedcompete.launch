@@ -1,0 +1,10 @@
+<launch>
+	<!-- vim: set ft=xml noet : -->
+
+	<node pkg="land" type="landTargetPosition" name="landTargetPosition" output="screen" />
+    <node pkg="imav" type="gameplan_speedcompete" name="gameplan_speedcompete" output="screen">
+		<param name="height_land" type="double" value="1.0" />
+        <param name="rtl_battery" type="double" value="0.25" />
+        <param name="rtl_flytime" type="double" value="600.0" />
+	</node>
+</launch>

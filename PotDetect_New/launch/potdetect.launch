@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find imav)/launch/imav_basic.launch" />
+    <node pkg="potdetect_new" type="potdetect_new" name="potdetect_new" output="screen" />
+    <node pkg="potdetect_new" type="ImageFetcher_new" name="ImageFetcher_new" output="screen" />
+</launch>

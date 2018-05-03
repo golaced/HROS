@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="oldx" type="px4_info" name="px4_info" output="screen">
+    </node>
+</launch>

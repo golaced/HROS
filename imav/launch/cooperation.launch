@@ -1,0 +1,21 @@
+<launch>
+    <node pkg="imav" type="recordPoints" name="recordPoints" output="screen">
+	    <param name="wp_height" type="double" value="3.0" />
+	    <param name="mission_speed" type="double" value="1.0" /> 
+    </node>
+
+    <node pkg="imav" type="get_uwb_distance" name="get_uwb_distance" output="screen">
+	    <param name="uwb_port_name" type="str" value="/dev/ttyACM1" />
+    </node>
+
+    <node pkg="imav" type="cooperation" name="cooperation" output="screen">
+        <param name="exp_distance" type="int" value="3000" />
+        <param name="exp_high" type="double" value="5.0" />
+        <param name="land_dis" type="double" value="50.0" />
+        <param name="kp" type="double" value="0.0045" />
+        <param name="kd" type="double" value="0.0015" />
+        <param name="en_spd0" type="int" value="1" />
+        <param name="en_spd1" type="int" value="0" />
+        <param name="target_change_time" type="double" value="8.0" />
+    </node>
+</launch>

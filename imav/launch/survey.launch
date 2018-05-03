@@ -1,0 +1,10 @@
+<launch>
+	<include file="$(find imav)/launch/imav_basic.launch" />
+    <node pkg="imav" type="video_location" name="video_location" output="screen" />
+    <node pkg="land" type="landTargetPosition" name="landTargetPosition" output="screen" />
+
+    <node pkg="imav" type="gameplan_survey" name="gameplan_survey" output="screen">
+        <param name="height_land" type="double" value="1.0" />
+    </node>
+    
+</launch>

@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="oldx" type="communication" name="communication" output="screen">
+        <!--<param name="port_name" type="string" value="/dev/ttyUSB0" />
+        <param name="baudrate" type="int" value="230400" />-->
+    </node>
+</launch>

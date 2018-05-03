@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find oldx)/launch/oldx_serial.launch" />
+    <include file="$(find oldx)/launch/px4_info.launch" />
+    <include file="$(find oldx)/launch/communication.launch" />
+</launch>

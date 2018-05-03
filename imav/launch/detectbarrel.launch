@@ -1,0 +1,12 @@
+<launch>
+	<include file="$(find imav)/launch/imav_basic.launch" />
+    <node pkg="potdetect_new" type="ImageFetcher_new" name="ImageFetcher_new" output="screen" />
+    <node pkg="potdetect_new" type="potdetect_new" name="potdetect_new" output="screen" />
+    <node pkg="land" type="landTargetPosition" name="landTargetPosition" output="screen" />
+    
+    <node pkg="imav" type="gameplan_barrel" name="gameplan_barrel" output="screen">
+        <param name="height_land" type="double" value="1.0" />
+        <param name="counter_to_savebarrel" type="int" value="10" />
+        <param name="counter_to_checkbarrel" type="int" value="5" />
+    </node>
+</launch>
